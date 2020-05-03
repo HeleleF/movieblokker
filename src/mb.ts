@@ -649,6 +649,9 @@ class MBExtractor {
     }
 }
 
+/**
+ * Fixes the site
+ */
 export class MBFixer {
 
     private content!: ContentSource;
@@ -674,7 +677,7 @@ export class MBFixer {
         this.siteType = where.trim();
         this.info = null;
 
-        this.toggleFunc = this.toggle.bind(this);;
+        this.toggleFunc = this.toggle.bind(this);
 
         this.extractor = new MBExtractor(true);
 

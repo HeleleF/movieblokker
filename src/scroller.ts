@@ -26,8 +26,6 @@ export class MBContentSource extends ContentSource {
     private articleSelector: string;
     private query: string | undefined;
 
-    private readonly DOMAIN: string = 'http://movie-blog.sx';
-
     constructor(cat: string, artSel: string, query?: string) {
 
         super();
@@ -111,9 +109,9 @@ export class MBContentSource extends ContentSource {
         let link: string;
 
         if (this.category === 'search') {
-            link = `${this.DOMAIN}/page/${num}/?s=${this.query}&cat=0`;
+            link = `${location.origin}/page/${num}/?s=${this.query}&cat=0`;
         } else {
-            link = `${this.DOMAIN}/category/${this.category}/page/${num}/`;
+            link = `${location.origin}/category/${this.category}/page/${num}/`;
         }
 
         try {
@@ -174,7 +172,6 @@ export class MBContentSource extends ContentSource {
     }
 
     render(item: Row, div?: HTMLDivElement) {
-        // TODO: Different style?
         div = div || this.messageTemplate_.cloneNode(true) as HTMLDivElement;
         div.dataset.id = item.id;
 

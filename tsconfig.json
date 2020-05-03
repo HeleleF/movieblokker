@@ -1,7 +1,12 @@
 {
-    "files": ["src/mb.ts"],
+    "files": ["src/mb.ts", "src/main.ts", "src/scroller.ts", "src/utils.ts", "src/interfaces.ts"],
     "compilerOptions": {
-      "noImplicitAny": true,
-      "target": "ESNext"
+      "strict": true,
+      "removeComments": true,
+      "target": "ESNext",
+      "module": "ESNext",
+      "noUnusedLocals": true,                /* Report errors on unused locals. */
+      "noUnusedParameters": true,            /* Report errors on unused parameters. */
+      "noImplicitReturns": true,             /* Report error when not all code paths in function return a value. */
     }
   }
