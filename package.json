@@ -1,0 +1,30 @@
+{
+  "name": "movieblokker",
+  "version": "0.0.1",
+  "description": "Tries to fix the mess that is MovieBlog",
+  "main": "mb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeleleF/movieblokker.git"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HeleleF/movieblokker/issues"
+  },
+  "homepage": "https://github.com/HeleleF/movieblokker#readme",
+  "devDependencies": {
+    "@types/chrome": "0.0.106",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-terser": "^1.2.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "terser": "^4.6.13",
+    "typescript": "^3.8.3"
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "files": ["src/mb.ts"],
+    "compilerOptions": {
+      "noImplicitAny": true,
+      "target": "ESNext"
+    }
+  }
