@@ -2,26 +2,22 @@
 
 ## Project Structure
 
-* src/: TypeScript source files
-* static/: static files
-* dist: Chrome Extension directory
+* `src/`: TypeScript source files
+* `static/`: static files
+* `dist/`: Extension directory
 
 ## Setup
 
-```
-npm install
-```
+`npm install` to install dependencies
 
-## Import as Visual Studio Code project
-
-...
 
 ## Build
 
-```
-npm run build
-```
+`npm run build` or `gulp`
+
 
 ## Load extension to chrome
 
-Load `dist` directory
+Replace `{{SITE_NAME}}` in `dist/manifest.json` with the actual name. <sup>*If you dont know the name, what are you doing here? ;)*</sup>
+
+Load `dist` directory as unpacked extension (requires dev mode)

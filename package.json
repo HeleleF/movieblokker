@@ -1,8 +1,7 @@
 {
   "name": "movieblokker",
   "version": "0.0.1",
-  "description": "Tries to fix the mess that is MovieBlog",
-  "main": "mb.js",
+  "description": "A browser extension",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp"
