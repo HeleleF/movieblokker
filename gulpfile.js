@@ -40,4 +40,6 @@ task('clean', () => {
     return del(['dist/*.js', '!dist/content.js']);
 });
 
-task('default', parallel('static', 'css', series('ts', 'combine', 'clean')))
+task('js', series('ts', 'combine', 'clean'));
+
+task('default', parallel('static', 'css', 'js'))
