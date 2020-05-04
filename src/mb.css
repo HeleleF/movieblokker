@@ -289,16 +289,20 @@ margin: 0 0 12px 0;
 
 .commentlink {
 font-size: 10px;
+margin: 0;
 }
 
-.com_pic {
-background: url(http://movie-blog.sx/wp-content/themes/concrete/images/bubble.gif) no-repeat left;
-height: 26px;
-}
-
-.com_info {
+.commentinfo {
 color: coral;
-padding: 0 0 0 32px;
+padding-left: 25px;
+}
+
+.commenticon {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    float: left;
+    font-size: 20px;
 }
 
 .commentcount {

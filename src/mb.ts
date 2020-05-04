@@ -833,11 +833,10 @@ export class MBFixer {
             cbody.className = 'comment';
 
             cbody.innerHTML = `
-            <div class="com_pic">
-                <div class="com_info">${comment.author}
-                    <br>
-                    <a class="commentlink">${comment.from}</a>
-                </div>
+            <div class="commenticon"><i class="far fa-comment"></i></div>
+            <div class="commentinfo">${comment.author}
+                <br>
+                <p class="commentlink">${comment.from}</p>
             </div>
             <div class="commentcount">${idx + 1}</div>
             <br>
