@@ -1,4 +1,4 @@
-const { src, task, dest, series, parallel } = require('gulp');
+const { src, task, dest, series, parallel, watch } = require('gulp');
 const del = require('del');
 
 const cleanCSS = require('gulp-clean-css');
@@ -26,7 +26,6 @@ task('ts', () => {
         .pipe(tsProject())
         .pipe(dest('dist'));
 });
-
 task('combine', () => {
     return src(['dist/utils.js', 'dist/interfaces.js', 'dist/scroller.js', 'dist/mb.js', 'dist/main.js'])
       .pipe(concat('content.js'))
@@ -35,11 +34,21 @@ task('combine', () => {
       //.pipe(terser())
       .pipe(dest('dist'));
 });
-
 task('clean', () => {
     return del(['dist/*.js', '!dist/content.js']);
 });
-
 task('js', series('ts', 'combine', 'clean'));
 
-task('default', parallel('static', 'css', 'js'))
+task('default', parallel('static', 'css', 'js'));
+
+task('watchStatic', () => {
+    return watch('static/**/*', { delay: 500 }, 'static')
+});
+task('watchCSS', () => {
+    return watch('src/*.css', { delay: 500 }, 'css')
+});
+task('watchJS', () => {
+    return watch('src/*.ts', { delay: 700 }, 'js')
+});
+
+task('dev', parallel('watchStatic', 'watchCSS', 'watchJS'))
