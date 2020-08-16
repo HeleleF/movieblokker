@@ -789,7 +789,9 @@ export class MBFixer {
         const resultStuff = `
         <div class="result-article-wrapper">
             <article class="article-result invisible">
-                <h1 id="header-result" class="result-header"></h1>
+                <h1 id="header-result" class="result-header">
+                    <a id="header-original-link" rel="noreferrer"></a>
+                </h1>
                 <p id="caption-result" class="result-caption"></p>
                 <blockquote id="block-result" class="result-block"></blockquote>
                 <img id="img-result" class="result-img">
@@ -915,7 +917,9 @@ export class MBFixer {
         this.debugElem.textContent = JSON.stringify(this.info, null, 2);
         document.getElementById('toggle')!.addEventListener('click', this.toggleFunc);
 
-        this.resultElem.querySelector('#header-result')!.textContent = this.info.releaseName;
+        this.resultElem.querySelector('#header-original-link')!.textContent = this.info.releaseName;
+        (this.resultElem.querySelector('#header-original-link')! as HTMLAnchorElement).href = location.href.replace(/#result$/, '');
+
         this.resultElem.querySelector('#caption-result')!.textContent = this.info.description;
         this.resultElem.querySelector('#block-result')!.innerHTML = this.info.additionalReleaseInformation ?? '';
         (this.resultElem.querySelector('#img-result')! as HTMLImageElement).src = this.info.imageSrc;

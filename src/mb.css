@@ -354,3 +354,8 @@ text-decoration: none;
 .group-title {
 margin-left: 5px;
 }
+
+#header-original-link {
+    color: inherit;
+    text-decoration: inherit;
+}
