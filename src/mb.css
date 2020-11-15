@@ -1,16 +1,16 @@
 html {
-background: #000!important;
+background: #000 !important;
 }
 
 body {
-background: 0 0!important;
+background: 0 0 !important;
 }
 
 body, html {
 height: 100%;
 margin: 0;
 padding: 0;
-font-family: Roboto, sans-serif!important;
+font-family: Roboto, sans-serif !important;
 }
 
 #templates {
