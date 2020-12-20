@@ -13,7 +13,7 @@
   
     "content_scripts": [
       {
-        "matches": ["{{SITE_NAME}}"],
+        "matches": ["{{SITE_NAME}}/*"],
         "js": ["content.js"],
         "css": ["mb.css"],
         "run_at": "document_start"
