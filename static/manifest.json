@@ -13,7 +13,7 @@
   
     "content_scripts": [
       {
-        "matches": ["https://movie-blog.tv/*"],
+        "matches": ["{{SITE_NAME}}"],
         "js": ["content.js"],
         "css": ["mb.css"],
         "run_at": "document_start"
