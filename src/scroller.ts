@@ -111,7 +111,15 @@ export class MBContentSource extends ContentSource {
         if (this.category === 'search') {
             link = `${location.origin}/page/${num}/?s=${this.query}&cat=0`;
         } else {
-            link = `${location.origin}/category/${this.category}/page/${num}/`;
+
+            // page/1 would work too, but redirects to http instead of https,
+            // which causes the request to fail with MixedContent Error
+            // as long as this isnt fixed, we just use this workaround
+            if (num === 1) {
+                link = `${location.origin}/category/${this.category}/`;
+            } else {
+                link = `${location.origin}/category/${this.category}/page/${num}/`;
+            } 
         }
 
         try {
