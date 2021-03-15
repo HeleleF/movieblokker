@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A browser extension",
   "scripts": {
+    "start:dev": "gulp dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp"
   },
@@ -19,15 +20,15 @@
   },
   "homepage": "https://github.com/HeleleF/movieblokker#readme",
   "devDependencies": {
-    "@types/chrome": "0.0.106",
-    "del": "^5.1.0",
+    "@types/chrome": "0.0.133",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-replace": "^1.0.0",
-    "gulp-terser": "^1.2.0",
+    "gulp-terser": "^2.0.1",
     "gulp-typescript": "^6.0.0-alpha.1",
-    "terser": "^4.6.13",
-    "typescript": "^3.8.3"
+    "terser": "^5.6.0",
+    "typescript": "^4.2.3"
   }
 }
