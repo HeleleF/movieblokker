@@ -1,23 +1,21 @@
 {
+  "manifest_version": 2,
+  "name": "MB Fixer",
+  "version": "0.0.1",
 
-    "manifest_version": 2,
-    "name": "MB Fixer",
-    "version": "0.0.1",
-  
-    "description": "Tries to fix the mess that is MB",
-  
-    "icons": {
-      "48": "icons/48.png",
-      "96": "icons/96.png"
-    },
-  
-    "content_scripts": [
-      {
-        "matches": ["https://movie-blog.tv/*"],
-        "js": ["content.js"],
-        "css": ["mb.css"],
-        "run_at": "document_start"
-      }
-    ]
-  
-  }
+  "description": "Tries to fix the mess that is MB",
+
+  "icons": {
+    "48": "icons/48.png",
+    "96": "icons/96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://{{SITE_NAME}}/*"],
+      "js": ["content.js"],
+      "css": ["mb.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
