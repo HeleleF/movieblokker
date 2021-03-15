@@ -1,5 +1,7 @@
 # MB Fixer
 
+**UPDATE** Site is currently down 😭
+
 ## Project Structure
 
 * `src/`: TypeScript source files
@@ -11,16 +13,16 @@
 #### Dev
 
 1. `npm install` to install dependencies
-2. `npm run build` or `gulp` to create the dist folder
-3. [Load extension](##load-extension)
-4. `gulp dev` to watch for changes and update the dist folder
+2. `npm run build` to create the dist folder
+3. [Load extension](#load-extension)
+4. `npm run start:dev` to watch for changes and update the dist folder
 5. Change stuff
-6. [Reload extension](##reload-extension)
+6. [Reload extension](#reload-extension)
 
 #### User
 
 1. Download the newest `dist.zip` from [this repo](https://github.com/HeleleF/movieblokker/releases) and unzip it
-2. [Load extension](##load-extension)
+2. [Load extension](#load-extension)
 
 
 ## Load extension
